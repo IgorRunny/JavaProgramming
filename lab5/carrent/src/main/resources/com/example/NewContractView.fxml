@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.controller.NewContractController"
+          hgap="10" vgap="10">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <!-- Строка 0: Сотрудник -->
+    <Label text="Сотрудник:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="cbEmployee" promptText="Выберите сотрудника"
+              GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <!-- Строка 1: Арендатор -->
+    <Label text="Арендатор:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="cbCustomer" promptText="Выберите арендатора"
+              GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <!-- Строка 2: Автомобиль -->
+    <Label text="Автомобиль:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="cbCar" promptText="Выберите машину"
+              GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- Строка 3: Дата начала -->
+    <Label text="Дата начала:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <DatePicker fx:id="dpStart"
+                GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- Строка 4: Дата окончания -->
+    <Label text="Дата окончания:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <DatePicker fx:id="dpEnd"
+                GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <!-- Строка 5: Суточная цена -->
+    <Label text="Цена за сутки:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfDailyRate" promptText="например, 1200.00"
+               GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <!-- Строка 6: Кнопка Сохранить -->
+    <Button fx:id="btnSave" text="Сохранить"
+            onAction="#onSave"
+            GridPane.rowIndex="6" GridPane.columnIndex="1"
+            GridPane.halignment="RIGHT"/>
+</GridPane>

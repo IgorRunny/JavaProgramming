@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.MainController">
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Номер договора:" />
+            <TextField fx:id="txtContractNumber" promptText="CT-XXXX"/>
+            <Button fx:id="btnFind" text="Найти" onAction="#onFind" />
+            <Button fx:id="btnNewContract" text="Новый договор" onAction="#onNewContract"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="Добро пожаловать в Car Rental Admin" />
+
+        </VBox>
+    </center>
+</BorderPane>
